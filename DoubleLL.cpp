@@ -75,6 +75,7 @@ void deleteNode(int pos, Node *&head, Node *&tail)
     { // if deleted node is first node
         Node *temp = head;
         head = head->next;
+        (temp->next)->prev=NULL;
         temp->next = NULL;
         delete temp;
     }
